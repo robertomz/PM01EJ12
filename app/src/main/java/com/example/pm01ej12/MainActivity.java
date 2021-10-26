@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtNombre = findViewById(R.id.txtNombre);
-        txtApellido = findViewById(R.id.txtApellido);
-        txtEdad = findViewById(R.id.txtEdad);
-        txtCorreo = findViewById(R.id.txtCorreo);
+        txtNombre = (EditText) findViewById(R.id.txtNombre);
+        txtApellido = (EditText) findViewById(R.id.txtApellido);
+        txtEdad = (EditText) findViewById(R.id.txtEdad);
+        txtCorreo = (EditText) findViewById(R.id.txtCorreo);
 
-        Button btnEnviar = findViewById(R.id.btnEnviar);
+        Button btnEnviar = (Button) findViewById(R.id.btnEnviar);
 
         btnEnviar.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Informacion.class);

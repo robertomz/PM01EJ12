@@ -16,12 +16,12 @@ public class Informacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion);
 
-        txtNombreI = findViewById(R.id.txtNombreI);
-        txtApellidoI = findViewById(R.id.txtApellidoI);
-        txtEdadI = findViewById(R.id.txtEdadI);
-        txtCorreoI = findViewById(R.id.txtCorreoI);
+        txtNombreI = (EditText) findViewById(R.id.txtNombreI);
+        txtApellidoI = (EditText) findViewById(R.id.txtApellidoI);
+        txtEdadI = (EditText) findViewById(R.id.txtEdadI);
+        txtCorreoI = (EditText) findViewById(R.id.txtCorreoI);
 
-        Button btnRegresar = findViewById(R.id.btnRegresar);
+        Button btnRegresar = (Button) findViewById(R.id.btnRegresar);
 
         btnRegresar.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
