@@ -21,6 +21,11 @@ public class Informacion extends AppCompatActivity {
         txtEdadI = (EditText) findViewById(R.id.txtEdadI);
         txtCorreoI = (EditText) findViewById(R.id.txtCorreoI);
 
+        String txtNombre = getIntent().getStringExtra("Nombre");
+        String txtApellido = getIntent().getStringExtra("Apellido");
+        String txtEdad = getIntent().getStringExtra("Edadd");
+        String txtCorreo = getIntent().getStringExtra("Correo");
+
         Button btnRegresar = (Button) findViewById(R.id.btnRegresar);
 
         btnRegresar.setOnClickListener(v -> {
@@ -28,9 +33,9 @@ public class Informacion extends AppCompatActivity {
             startActivity(intent);
         });
 
-        txtNombreI.setText(txtNombreI.toString());
-        txtApellidoI.setText(txtApellidoI.toString());
-        txtEdadI.setText(txtEdadI.toString());
-        txtCorreoI.setText(txtCorreoI.toString());
+        txtNombreI.setText(txtNombre.toString());
+        txtApellidoI.setText(txtApellido.toString());
+        txtEdadI.setText(txtEdad.toString());
+        txtCorreoI.setText(txtCorreo.toString());
     }
 }
