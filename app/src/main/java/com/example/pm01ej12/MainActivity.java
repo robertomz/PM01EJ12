@@ -25,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         btnEnviar.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Informacion.class);
+
+            intent.putExtra("Nombre", txtNombre.getText().toString());
+            intent.putExtra("Apellido", txtApellido.getText().toString());
+            intent.putExtra("Edadd", txtEdad.getText().toString());
+            intent.putExtra("Correo", txtCorreo.getText().toString());
+
+            startActivity(intent);
         });
     }
 }
